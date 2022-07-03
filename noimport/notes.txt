@@ -1,0 +1,2 @@
+in Project->Properties->Linker->Input, write Yes in ignore all default libraries. Basically remove all auto linking of libraries. Under Linker->Advanced, set entry point to main.
+in c/c++, disable GS(stack cookies)
