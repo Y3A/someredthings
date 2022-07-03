@@ -1,0 +1,12 @@
+﻿  Assembling helper.asm...
+cl : command line warning D9025: overriding '/sdl' with '/GS-'
+  src.c
+C:\Users\chenl\Desktop\hacking\experiments\noimport\noimport\src.c(17,51): warning C4047: 'function': 'UINT64' differs in levels of indirection from 'HMODULE'
+C:\Users\chenl\Desktop\hacking\experiments\noimport\noimport\src.c(17,40): warning C4024: '_GetProcAddress': different types for formal and actual parameter 1
+C:\Users\chenl\Desktop\hacking\experiments\noimport\noimport\src.c(13,1): warning C4047: 'initializing': 'LLA' differs in levels of indirection from 'UINT64'
+C:\Users\chenl\Desktop\hacking\experiments\noimport\noimport\src.c(17,1): warning C4047: 'initializing': 'MBA' differs in levels of indirection from 'UINT64'
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 1 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  noimport.vcxproj -> C:\Users\chenl\Desktop\hacking\experiments\noimport\noimport\x64\Release\noimport.exe
