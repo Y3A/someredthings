@@ -1,0 +1,10 @@
+﻿  main.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\simple_apc\main.c(135,106): warning C4047: '=': 'char *' differs in levels of indirection from 'UINT64'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\simple_apc\main.c(145,91): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\simple_apc\main.c(154,54): warning C4047: 'function': 'ULONG_PTR' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\simple_apc\main.c(154,50): warning C4024: 'QueueUserAPC': different types for formal and actual parameter 3
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  simple_apc.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\simple_apc\x64\Release\simple_apc.exe
