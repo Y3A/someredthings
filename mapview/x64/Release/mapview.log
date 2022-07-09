@@ -1,0 +1,20 @@
+﻿  main.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(184,1): warning C4047: 'function': 'ULONG_PTR' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(173,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 4
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(184,1): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(173,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 5
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(184,1): warning C4047: 'function': 'ULONG' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(173,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 9
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(204,1): warning C4047: 'function': 'ULONG_PTR' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(193,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 4
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(204,1): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(193,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 5
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(204,1): warning C4047: 'function': 'ULONG' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(193,1): warning C4024: '_NtMapViewOfSection': different types for formal and actual parameter 9
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\main.c(230,56): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'DWORD'
+  Generating code
+  1 of 7 functions (14.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  mapview.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\mapview\x64\Release\mapview.exe
