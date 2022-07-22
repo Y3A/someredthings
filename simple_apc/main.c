@@ -72,7 +72,7 @@ int main(void)
 {
     DWORD       notepad_pid = 0, thread_id = 0;
     HANDLE      process = NULL, thread = NULL;
-    char *base = NULL;
+    char        *base = NULL;
     DWORD       written = 0;
 
     // msfvenom --platform windows -p windows/x64/messagebox TEXT="shellcode execution" EXITFUNC=thread -f c
