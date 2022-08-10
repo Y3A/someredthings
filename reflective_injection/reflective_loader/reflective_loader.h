@@ -14,41 +14,41 @@ typedef struct _IMAGE_RELOC
 
 typedef struct _UNICODE_STRING
 {
-	USHORT Length;
-	USHORT MaximumLength;
-	PWSTR Buffer;
+    USHORT Length;
+    USHORT MaximumLength;
+    PWSTR Buffer;
 } UNICODE_STRING, *PUNICODE_STRING, **PPUNICODE_STRING;
 
-typedef NTSTATUS (NTAPI *LLD) (
-	IN OPTIONAL PWSTR DllPath,
-	IN OPTIONAL PULONG DllCharacteristics,
-	IN PUNICODE_STRING DllName,
-	OUT PVOID *DllHandle
-);
+typedef NTSTATUS(NTAPI *LLD) (
+    IN OPTIONAL PWSTR DllPath,
+    IN OPTIONAL PULONG DllCharacteristics,
+    IN PUNICODE_STRING DllName,
+    OUT PVOID *DllHandle
+    );
 
-typedef NTSTATUS (NTAPI *NAVM) (
+typedef NTSTATUS(NTAPI *NAVM) (
     IN HANDLE ProcessHandle,
     IN OUT PVOID *BaseAddress,
     IN ULONG_PTR ZeroBits,
     IN OUT PSIZE_T RegionSize,
     IN ULONG AllocationType,
     IN ULONG Protect
-);
+    );
 
-typedef NTSTATUS (NTAPI *NPVM) (
+typedef NTSTATUS(NTAPI *NPVM) (
     IN HANDLE ProcessHandle,
     IN OUT PVOID *BaseAddress,
     IN OUT PSIZE_T RegionSize,
     IN ULONG NewProtect,
     OUT PULONG OldProtect
-);
+    );
 
-typedef NTSTATUS (NTAPI *NFVM) (
+typedef NTSTATUS(NTAPI *NFVM) (
     IN HANDLE ProcessHandle,
     IN OUT PVOID *BaseAddress,
     IN OUT PSIZE_T RegionSize,
     IN ULONG FreeType
-);
+    );
 
 typedef struct
 {
