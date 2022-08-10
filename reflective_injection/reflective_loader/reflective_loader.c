@@ -5,37 +5,37 @@
 
 DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
 {
-    HMODULE					    NtBase = NULL, PeBase = NULL;
-    _NtFuncs					NtFuncs;
-    _EntryArgs					EntryArgs;
-    PIMAGE_NT_HEADERS			NtHeaders = NULL;
-    PIMAGE_SECTION_HEADER		SecHeaders = NULL;
-    SIZE_T						ImageSz = 0;
-    LPVOID						NewBase = 0;
-    PIMAGE_DATA_DIRECTORY		ImageDir = NULL;
-    PIMAGE_IMPORT_DESCRIPTOR	ImageDesc = NULL;
-    HMODULE						ModuleBase = NULL;
-    UNICODE_STRING				ModuleStr;
-    WCHAR						ModuleName[MAX_PATH];
-    PIMAGE_NT_HEADERS			ModuleHeaders = NULL;
-    PIMAGE_DATA_DIRECTORY		ModuleDir = NULL;
-    PIMAGE_EXPORT_DIRECTORY		ModuleExport = NULL;
-    ULONG_PTR					ModuleAddresses;
-    PIMAGE_THUNK_DATA			OriginalFirst = NULL, FirstThunk = NULL;
-    UINT64						RelocDelta = 0;
-    PIMAGE_DATA_DIRECTORY		RelocDir = NULL;
-    PIMAGE_BASE_RELOCATION		RelocBlock = NULL;
-    PIMAGE_RELOC				RelocEntry = NULL;
-    ULONG_PTR					RelocBase = 0;
-    ULONG_PTR					ProtBase = 0;
-    SIZE_T						ProtSize = 0;
-    ULONG						OldProt = 0, NewProt = 0;
-    SIZE_T						FreeSize = 0;
-    DWORD						i = 0;
+    HMODULE                     NtBase = NULL, PeBase = NULL;
+    _NtFuncs                    NtFuncs;
+    _EntryArgs                  EntryArgs;
+    PIMAGE_NT_HEADERS           NtHeaders = NULL;
+    PIMAGE_SECTION_HEADER       SecHeaders = NULL;
+    SIZE_T                      ImageSz = 0;
+    LPVOID                      NewBase = 0;
+    PIMAGE_DATA_DIRECTORY       ImageDir = NULL;
+    PIMAGE_IMPORT_DESCRIPTOR    ImageDesc = NULL;
+    HMODULE                     ModuleBase = NULL;
+    UNICODE_STRING              ModuleStr;
+    WCHAR                       ModuleName[MAX_PATH];
+    PIMAGE_NT_HEADERS           ModuleHeaders = NULL;
+    PIMAGE_DATA_DIRECTORY       ModuleDir = NULL;
+    PIMAGE_EXPORT_DIRECTORY     ModuleExport = NULL;
+    ULONG_PTR                   ModuleAddresses;
+    PIMAGE_THUNK_DATA           OriginalFirst = NULL, FirstThunk = NULL;
+    UINT64                      RelocDelta = 0;
+    PIMAGE_DATA_DIRECTORY       RelocDir = NULL;
+    PIMAGE_BASE_RELOCATION      RelocBlock = NULL;
+    PIMAGE_RELOC                RelocEntry = NULL;
+    ULONG_PTR                   RelocBase = 0;
+    ULONG_PTR                   ProtBase = 0;
+    SIZE_T                      ProtSize = 0;
+    ULONG                       OldProt = 0, NewProt = 0;
+    SIZE_T                      FreeSize = 0;
+    DWORD                       i = 0;
     /*
         * Doing this way so our string lands on stack.
     */
-    wchar_t						ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c };
+    wchar_t                     ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c };
 
     /*
         Manual memset so the compiler doesn't insert its own memset
