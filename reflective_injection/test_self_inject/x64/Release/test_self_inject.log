@@ -1,0 +1,8 @@
+﻿  test.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\reflective_injection\test_self_inject\test.c(121,9): warning C4477: 'printf' : format string '%p' requires an argument of type 'void *', but variadic argument 1 has type 'UINT64'
+  Generating code
+  3 of 6 functions (50.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  test_self_inject.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\reflective_injection\x64\Release\test_self_inject.exe
