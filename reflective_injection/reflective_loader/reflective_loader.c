@@ -35,7 +35,7 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
     /*
         * Doing this way so our string lands on stack.
     */
-    wchar_t                     ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c };
+    wchar_t                     ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c, 0x0 };
 
     /*
         Manual memset so the compiler doesn't insert its own memset
