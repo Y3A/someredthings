@@ -11,6 +11,8 @@ typedef struct
     DWORD   opt;
     char    filepath[MAX_PATH + 1];
     DWORD   offset;
+    DWORD   passargs[4];
+    DWORD   argc;
 
 } BUILDER_ARGS, *PBUILDER_ARGS;
 
