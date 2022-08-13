@@ -14,12 +14,12 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
     LPVOID                      NewBase = 0;
     PIMAGE_DATA_DIRECTORY       ImageDir = NULL;
     PIMAGE_IMPORT_DESCRIPTOR    ImageDesc = NULL;
-    HMODULE                     ModuleBase = NULL;
+    HMODULE                     ModuleBase = NULL, NewModuleBase = NULL;
     UNICODE_STRING              ModuleStr;
     WCHAR                       ModuleName[MAX_PATH];
     PIMAGE_NT_HEADERS           ModuleHeaders = NULL;
     PIMAGE_DATA_DIRECTORY       ModuleDir = NULL;
-    PIMAGE_EXPORT_DIRECTORY     ModuleExport = NULL;
+    PIMAGE_EXPORT_DIRECTORY     ModuleExport = NULL, NewModuleExport = NULL;
     ULONG_PTR                   ModuleAddresses;
     PIMAGE_THUNK_DATA           OriginalFirst = NULL, FirstThunk = NULL;
     UINT64                      RelocDelta = 0;
@@ -35,7 +35,7 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
     /*
         * Doing this way so our string lands on stack.
     */
-    wchar_t                     ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c, 0x0 };
+    wchar_t                     ntd[] = { 0x6e, 0x74, 0x64, 0x6c, 0x6c, 0x2e, 0x64, 0x6c, 0x6c };
 
     /*
         Manual memset so the compiler doesn't insert its own memset
@@ -92,6 +92,11 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
         ModuleStr.MaximumLength = ModuleStr.Length;
         NtFuncs.LdrLoadDll(NULL, 0, &ModuleStr, &ModuleBase);
 
+        ModuleHeaders = (PIMAGE_NT_HEADERS)((UINT64)ModuleBase + ((PIMAGE_DOS_HEADER)ModuleBase)->e_lfanew);
+        ModuleDir = (PIMAGE_DATA_DIRECTORY) & (ModuleHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]);
+        ModuleExport = (PIMAGE_EXPORT_DIRECTORY)((UINT64)ModuleBase + ModuleDir->VirtualAddress);
+        NewModuleExport = ModuleExport;
+
         OriginalFirst = (PIMAGE_THUNK_DATA)((UINT64)NewBase + ImageDesc->OriginalFirstThunk);
         FirstThunk = (PIMAGE_THUNK_DATA)((UINT64)NewBase + ImageDesc->FirstThunk);
 
@@ -101,9 +106,6 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
                 /*
                     * Import by ordinal
                 */
-                ModuleHeaders = (PIMAGE_NT_HEADERS)((UINT64)ModuleBase + ((PIMAGE_DOS_HEADER)ModuleBase)->e_lfanew);
-                ModuleDir = (PIMAGE_DATA_DIRECTORY) & (ModuleHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]);
-                ModuleExport = (PIMAGE_EXPORT_DIRECTORY)((UINT64)ModuleBase + ModuleDir->VirtualAddress);
                 ModuleAddresses = (UINT64)ModuleBase + ModuleExport->AddressOfFunctions;
                 ModuleAddresses += ((IMAGE_ORDINAL((OriginalFirst->u1.Ordinal)) - ModuleExport->Base) * sizeof(DWORD));
                 ModuleAddresses = (UINT64)ModuleBase + *(UINT64 *)ModuleAddresses;
@@ -115,6 +117,30 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
                 */
                 ModuleAddresses = _GetProcAddress(ModuleBase, _GetHash(((PIMAGE_IMPORT_BY_NAME)((UINT64)NewBase + OriginalFirst->u1.AddressOfData))->Name));
 
+            /*
+                * Check if function is forwarded
+            */
+            while (ModuleAddresses > NewModuleExport) {
+
+                /*
+                    * Address falls into export directory
+                    * It's a forwarded function with syntax MODULENAME.FUNCTIONNAME
+                */
+                _memset(ModuleName, 0, sizeof(ModuleName));
+                for (i = 0; ((char *)(ModuleAddresses))[i] != '.'; i++)
+                    ModuleName[i] = ((char *)(ModuleAddresses))[i];
+
+                ModuleStr.Buffer = ModuleName;
+                ModuleStr.Length = StringLengthW(ModuleName) * sizeof(WCHAR);
+                ModuleStr.MaximumLength = ModuleStr.Length;
+                NtFuncs.LdrLoadDll(NULL, 0, &ModuleStr, &NewModuleBase);
+
+                ModuleHeaders = (PIMAGE_NT_HEADERS)((UINT64)NewModuleBase + ((PIMAGE_DOS_HEADER)NewModuleBase)->e_lfanew);
+                ModuleDir = (PIMAGE_DATA_DIRECTORY) & (ModuleHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]);
+                NewModuleExport = (PIMAGE_EXPORT_DIRECTORY)((UINT64)NewModuleBase + ModuleDir->VirtualAddress);
+
+                ModuleAddresses = _GetProcAddress(NewModuleBase, _GetHash(ModuleAddresses + i + 1));
+            }
             *((ULONG_PTR *)(FirstThunk)) = ModuleAddresses;
         }
     }
@@ -188,9 +214,9 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
         * Call entry point
     */
     BOOL(WINAPI * EntryPoint) (PVOID, DWORD, PVOID) = (UINT64)NewBase + NtHeaders->OptionalHeader.AddressOfEntryPoint;
-    EntryPoint(NewBase, 9999, &EntryArgs);
+    EntryPoint(NewBase, DLL_PROCESS_ATTACH, (PVOID)1);
 
-    return (ULONG_PTR)EntryPoint;
+    return (ULONG_PTR)NewBase;
 }
 
 SIZE_T CharStringToWCharString(PWCHAR Dest, PCHAR Src, SIZE_T MaximumAllowed)
@@ -242,6 +268,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     SIZE_T sz = 0;
     switch (ul_reason_for_call) {
     case DLL_PROCESS_ATTACH:
+        MessageBoxA(NULL, "Attached!",NULL, MB_OK);
         break;
     case DLL_PROCESS_DETACH:
         break;
@@ -256,6 +283,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         ((_PEntryArgs)lpReserved)->NtFreeVirtualMemory(NtCurrentProcess(), ((_PEntryArgs)lpReserved)->OldBase, &sz, MEM_RELEASE);
         MessageBoxA(NULL, "PWNED", NULL, MB_HELP);
         TerminateThread(NtCurrentThread(), 0);
+        break;
     }
     return TRUE;
 }
