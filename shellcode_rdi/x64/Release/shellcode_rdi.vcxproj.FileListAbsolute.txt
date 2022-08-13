@@ -1,0 +1,1 @@
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\shellcode_rdi\x64\Release\shellcode_rdi.exe

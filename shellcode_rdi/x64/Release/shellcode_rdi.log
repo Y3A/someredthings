@@ -1,0 +1,8 @@
+﻿cl : command line warning D9025: overriding '/sdl' with '/GS-'
+  srdi.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\shellcode_rdi\srdi.c(113,23): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  shellcode_rdi.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\shellcode_rdi\x64\Release\shellcode_rdi.exe
