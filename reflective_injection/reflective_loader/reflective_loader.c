@@ -106,7 +106,7 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
                 ModuleExport = (PIMAGE_EXPORT_DIRECTORY)((UINT64)ModuleBase + ModuleDir->VirtualAddress);
                 ModuleAddresses = (UINT64)ModuleBase + ModuleExport->AddressOfFunctions;
                 ModuleAddresses += ((IMAGE_ORDINAL((OriginalFirst->u1.Ordinal)) - ModuleExport->Base) * sizeof(DWORD));
-                ModuleAddresses += (UINT64)ModuleBase;
+                ModuleAddresses = (UINT64)ModuleBase + *(UINT64 *)ModuleAddresses;
             }
             else
 
