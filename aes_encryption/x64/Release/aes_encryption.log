@@ -1,0 +1,30 @@
+﻿  src.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(29,89): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptOpenAlgorithmProvider'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(29,89): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptOpenAlgorithmProvider'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(30,69): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptGetProperty'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(30,69): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptGetProperty'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(31,87): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptGenerateSymmetricKey'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(31,87): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptGenerateSymmetricKey'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(32,61): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptEncrypt'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(32,61): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptEncrypt'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(33,61): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptDecrypt'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(33,61): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptDecrypt'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(34,67): warning C4113: 'FARPROC' differs in parameter lists from '__BCryptDestroyKey'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(34,67): warning C4133: '=': incompatible types - from 'FARPROC' to '__BCryptDestroyKey'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(60,10): warning C4133: 'function': incompatible types - from 'DWORD *' to 'PUCHAR'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(67,10): warning C4090: 'function': different 'const' qualifiers
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(71,10): warning C4267: 'function': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(79,10): warning C4267: 'function': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(112,10): warning C4133: 'function': incompatible types - from 'DWORD *' to 'PUCHAR'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(119,10): warning C4090: 'function': different 'const' qualifiers
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(123,10): warning C4267: 'function': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(131,10): warning C4267: 'function': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(159,10): warning C4133: 'function': incompatible types - from 'ULONG *' to 'size_t *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(162,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\src.c(165,10): warning C4133: 'function': incompatible types - from 'ULONG *' to 'size_t *'
+  Generating code
+  2 of 7 functions (28.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  aes_encryption.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\aes_encryption\x64\Release\aes_encryption.exe
