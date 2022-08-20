@@ -120,7 +120,7 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
             /*
                 * Check if function is forwarded
             */
-            while (ModuleAddresses > NewModuleExport) {
+            while (ModuleAddresses > NewModuleExport && ModuleAddresses < (NewModuleExport + ModuleDir->Size)) {
 
                 /*
                     * Address falls into export directory
