@@ -1,0 +1,10 @@
+﻿  src.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\src.c(50,1): warning C4047: 'initializing': 'ULONG_PTR' differs in levels of indirection from 'HMODULE'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\src.c(52,1): warning C4047: 'initializing': 'void (__cdecl *)(DWORD)' differs in levels of indirection from 'ULONG_PTR'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\src.c(62,1): warning C4047: 'initializing': 'ULONG_PTR' differs in levels of indirection from 'HMODULE'
+     Creating library C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\x64\Release\detours_hook.lib and object C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\x64\Release\detours_hook.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 3 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  detours_hook.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\detours_hook\x64\Release\detours_hook.dll
