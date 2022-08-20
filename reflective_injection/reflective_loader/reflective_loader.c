@@ -101,6 +101,7 @@ DLLEXPORT ULONG_PTR WINAPI ReflectiveLoader(void)
         FirstThunk = (PIMAGE_THUNK_DATA)((UINT64)NewBase + ImageDesc->FirstThunk);
 
         for (; OriginalFirst->u1.AddressOfData; OriginalFirst++, FirstThunk++) {
+            NewModuleExport = ModuleExport;
             if ((OriginalFirst->u1.Ordinal) & IMAGE_ORDINAL_FLAG) {
 
                 /*
