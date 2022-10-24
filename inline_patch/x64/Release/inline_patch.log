@@ -1,0 +1,16 @@
+﻿  src.c
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(45,30): warning C4047: 'function': 'const ULONG_PTR' differs in levels of indirection from 'int (__cdecl *)(HWND,LPCSTR,LPCSTR,UINT)'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(45,18): warning C4024: 'HookFunction': different types for formal and actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(45,44): warning C4047: 'function': 'const ULONG_PTR' differs in levels of indirection from 'int (__cdecl *)(HWND,LPCSTR,LPCSTR,UINT)'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(45,32): warning C4024: 'HookFunction': different types for formal and actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(57,106): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(61,92): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(71,106): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\src.c(73,20): warning C4087: 'HookMessageBox': declared with 'void' parameter list
+     Creating library C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\x64\Release\inline_patch.lib and object C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\x64\Release\inline_patch.exp
+  Generating code
+  1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  inline_patch.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\maldev\creations\someredthings-main\inline_patch\x64\Release\inline_patch.dll
