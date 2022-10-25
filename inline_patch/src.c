@@ -54,11 +54,11 @@ void WINAPI HookFunction(const ULONG_PTR origfunc_addr, const ULONG_PTR newfunc_
     // \xFF\x25\x00\x00\x00\x00
     // \x00\x11\x22\x33\x44\0x55\x66\x77
 
-    ReadProcessMemory(GetCurrentProcess(), (LPCVOID)MessageBoxA, g_orig_bytes, sizeof(g_orig_bytes), &out);
+    ReadProcessMemory(GetCurrentProcess(), (LPCVOID)origfunc_addr, g_orig_bytes, sizeof(g_orig_bytes), &out);
     char patch[14] = { 0 };
     memcpy(patch, "\xFF\x25", 2);
     *(PULONG_PTR)(patch + 6) = newfunc_addr;
-    WriteProcessMemory(GetCurrentProcess(), (LPVOID)MessageBoxA, patch, sizeof(patch), &out);
+    WriteProcessMemory(GetCurrentProcess(), (LPVOID)origfunc_addr, patch, sizeof(patch), &out);
 
     return;
 }
