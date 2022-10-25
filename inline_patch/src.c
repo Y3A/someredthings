@@ -70,7 +70,7 @@ int HijackedBox(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)
 
     WriteProcessMemory(GetCurrentProcess(), (LPVOID)MessageBoxA, g_orig_bytes, sizeof(g_orig_bytes), &out);
     ret = MessageBoxA(hWnd, lpText, "pwned", uType);
-    HookMessageBox(&MessageBoxA, &HijackedBox);
+    HookMessageBox();
 
     return ret;
 }
