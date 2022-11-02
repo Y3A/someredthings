@@ -1,0 +1,11 @@
+﻿  charons_ferry.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\charons_ferry\charons_ferry.c(183,84): warning C4022: 'GetSyscallAddress': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\charons_ferry\charons_ferry.c(187,84): warning C4022: 'GetSyscallAddress': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\charons_ferry\charons_ferry.c(258,74): warning C4022: 'WriteProcessMemory': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\charons_ferry\charons_ferry.c(258,113): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+  Generating code
+  0 of 9 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  charons_ferry.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\charons_ferry\x64\Release\charons_ferry.exe
