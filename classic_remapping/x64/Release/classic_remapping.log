@@ -1,0 +1,13 @@
+﻿  classic_remapping.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(109,107): warning C4047: '=': 'LPVOID' differs in levels of indirection from 'UINT64'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(119,87): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(186,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(193,43): warning C4022: 'memcpy': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(194,35): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(196,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+  Generating code
+  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  classic_remapping.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\x64\Release\classic_remapping.exe
