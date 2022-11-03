@@ -11,7 +11,6 @@
 
 #include <Windows.h>
 #include <stdio.h>
-#include <TlHelp32.h>
 
 #include "charons_ferry.h"
 
