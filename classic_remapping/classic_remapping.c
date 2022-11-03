@@ -1,6 +1,5 @@
 #include <Windows.h>
 #include <stdio.h>
-#include <TlHelp32.h>
 
 /*
  * Replace the TEXT section of the loaded ntdll
