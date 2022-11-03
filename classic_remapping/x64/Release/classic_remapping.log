@@ -1,10 +1,18 @@
 ﻿  classic_remapping.c
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(109,107): warning C4047: '=': 'LPVOID' differs in levels of indirection from 'UINT64'
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(119,87): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(186,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(193,43): warning C4022: 'memcpy': pointer mismatch for actual parameter 1
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(194,35): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
-C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(196,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(163,63): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(175,55): warning C4244: 'function': conversion from 'SIZE_T' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(185,59): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,119): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,115): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 8
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,125): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,121): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 9
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,131): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(195,127): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 10
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(71,30): warning C4101: 'written': unreferenced local variable
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(251,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(258,43): warning C4022: 'memcpy': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(259,35): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_remapping\classic_remapping.c(261,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
   Generating code
   1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
