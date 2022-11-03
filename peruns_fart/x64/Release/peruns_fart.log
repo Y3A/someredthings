@@ -1,0 +1,21 @@
+﻿  peruns_fart.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(116,84): warning C4047: '=': 'PIMAGE_NT_HEADERS' differs in levels of indirection from 'ULONG_PTR'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(127,100): warning C4133: 'function': incompatible types - from 'DWORD *' to 'SIZE_T *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(167,63): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(177,55): warning C4244: 'function': conversion from 'SIZE_T' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(185,59): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,119): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,115): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 8
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,125): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,121): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 9
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,131): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(193,127): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 10
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(247,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(254,43): warning C4022: 'memcpy': pointer mismatch for actual parameter 1
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(255,35): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\peruns_fart.c(257,66): warning C4022: 'VirtualProtect': pointer mismatch for actual parameter 1
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 6 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  peruns_fart.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\peruns_fart\x64\Release\peruns_fart.exe
