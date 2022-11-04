@@ -1,0 +1,10 @@
+﻿  etw_silencer.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\etw_silencer\etw_silencer.c(12,56): warning C4047: 'function': 'PDWORD' differs in levels of indirection from 'DWORD'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\etw_silencer\etw_silencer.c(12,53): warning C4024: 'VirtualProtect': different types for formal and actual parameter 4
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\etw_silencer\etw_silencer.c(12,58): warning C4020: 'VirtualProtect': too many actual parameters
+  Generating code
+  4 of 133 functions ( 3.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  etw_silencer.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\etw_silencer\x64\Release\etw_silencer.exe
