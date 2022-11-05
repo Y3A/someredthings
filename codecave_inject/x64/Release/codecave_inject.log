@@ -1,0 +1,26 @@
+﻿  injector.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(132,71): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(139,71): warning C4244: 'function': conversion from 'SIZE_T' to 'ULONG', possible loss of data
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,111): warning C4022: 'NtCreateThreadEx': pointer mismatch for actual parameter 6
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,128): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,124): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 8
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,134): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,130): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 9
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,140): warning C4047: 'function': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(153,136): warning C4024: 'NtCreateThreadEx': different types for formal and actual parameter 10
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(168,28): warning C4047: '=': 'DWORD64' differs in levels of indirection from 'PVOID'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(177,62): warning C4133: 'function': incompatible types - from 'SIZE_T *' to 'PULONG'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(123,1): warning C4113: 'NPVM' differs in parameter lists from 'NGCT'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(124,1): warning C4113: 'NPVM' differs in parameter lists from 'NSCT'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(125,1): warning C4113: 'NPVM' differs in parameter lists from 'NST'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(126,1): warning C4113: 'NPVM' differs in parameter lists from 'NRT'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(207,32): warning C4133: '=': incompatible types - from 'HMODULE' to 'PIMAGE_DOS_HEADER'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(218,82): warning C4047: '=': 'PVOID' differs in levels of indirection from 'ULONG_PTR'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\injector.c(219,87): warning C4047: '=': 'PVOID' differs in levels of indirection from 'ULONG_PTR'
+     Creating library C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\x64\Release\codecave_inject.lib and object C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\x64\Release\codecave_inject.exp
+  Generating code
+  2 of 3 functions (66.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  codecave_inject.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\codecave_inject\x64\Release\codecave_inject.dll
