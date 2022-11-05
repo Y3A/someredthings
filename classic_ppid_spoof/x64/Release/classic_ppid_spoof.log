@@ -1,0 +1,9 @@
+﻿  spoof.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_ppid_spoof\spoof.c(18,53): warning C4133: 'function': incompatible types - from 'unsigned short [13]' to 'char *'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_ppid_spoof\spoof.c(88,38): warning C4133: 'function': incompatible types - from 'WCHAR [260]' to 'const char *'
+  Generating code
+  0 of 5 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  classic_ppid_spoof.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\classic_ppid_spoof\x64\Release\classic_ppid_spoof.exe
