@@ -24,7 +24,7 @@ int main(void)
     hr = CoInitializeEx(NULL, COINIT_MULTITHREADED);
     if (!SUCCEEDED(hr)) {
         warn("CoInitializeEx fail", hr);
-        goto out;
+        return 0;
     }
 
     hr = CoCreateInstance(
