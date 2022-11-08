@@ -1,0 +1,9 @@
+﻿  spoof.cc
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\wmi_ppid_spoof\spoof.cc(143,17): warning C4477: 'wprintf' : format string '%s' requires an argument of type 'wchar_t *', but variadic argument 1 has type 'int'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\wmi_ppid_spoof\spoof.cc(143,17): warning C4313: 'wprintf': '%s' in format string conflicts with argument 1 of type 'int'
+  Generating code
+  1 of 20 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  wmi_ppid_spoof.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\wmi_ppid_spoof\x64\Release\wmi_ppid_spoof.exe
