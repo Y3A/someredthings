@@ -1,0 +1,8 @@
+﻿  spoof.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\params_spoof\spoof.c(106,89): warning C4022: 'WriteProcessMemory': pointer mismatch for actual parameter 2
+  Generating code
+  1 of 5 functions (20.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  params_spoof.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\params_spoof\x64\Release\params_spoof.exe
