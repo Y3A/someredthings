@@ -1,0 +1,14 @@
+﻿  suspend.c
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(153,67): warning C4133: 'function': incompatible types - from 'SERVICE_STATUS_PROCESS *' to 'LPBYTE'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(208,78): warning C4022: 'ReadProcessMemory': pointer mismatch for actual parameter 2
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(215,38): warning C4047: '=': 'ULONG' differs in levels of indirection from 'PVOID'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(133,1): warning C4113: 'FARPROC' differs in parameter lists from 'NQIT'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(133,1): warning C4133: 'initializing': incompatible types - from 'FARPROC' to 'NQIT'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(134,1): warning C4113: 'FARPROC' differs in parameter lists from 'I_QTI'
+C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\suspend.c(134,1): warning C4133: 'initializing': incompatible types - from 'FARPROC' to 'I_QTI'
+  Generating code
+  0 of 5 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  suspend_eventlog.vcxproj -> C:\Users\chenl\Desktop\hacking\courses\evasion\WEv\creations\suspend_eventlog\x64\Release\suspend_eventlog.exe
