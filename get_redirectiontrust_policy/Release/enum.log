@@ -1,0 +1,8 @@
+﻿  enum.c
+C:\Users\chenl\Desktop\enum\enum.c(28,17): warning C4098: 'get_protection': 'void' function returning a value
+  Generating code
+  5 of 5 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  enum.vcxproj -> C:\Users\chenl\Desktop\enum\Release\enum.exe
