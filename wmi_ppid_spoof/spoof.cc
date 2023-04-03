@@ -8,7 +8,7 @@
 
 // https://learn.microsoft.com/en-us/windows/win32/wmisdk/example--calling-a-provider-method
 
-#define warn(x, y) printf("%s : 0x%08X\n", x, y);
+#define warn(x, y) printf("%s : 0x%08X\n", x, y)
 
 #define CLASSNAME L"Win32_Process"
 #define METHODNAME L"Create"
