@@ -29,7 +29,7 @@ void get_protection(void)
     }
 
     while (Process32Next(snapshot, &entry)) {
-        hProc = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, entry.th32ProcessID);
+        hProc = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, entry.th32ProcessID);
         if (!hProc)
             continue;
 
